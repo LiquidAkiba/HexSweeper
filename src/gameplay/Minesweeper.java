@@ -1,4 +1,4 @@
-package Games;
+package gameplay;
 
 import Utilities.MathHelper;
 import Utilities.Stopwatch;
@@ -36,10 +36,10 @@ public abstract class Minesweeper
 
     public Minesweeper()
     {
-        setUpMassives();
+        setUpBoards();
         stopwatch = new Stopwatch();
     }
-    private void setUpMassives()
+    private void setUpBoards()
     {
         this.filed = new int[width][height];
         this.mask = new int[width][height];
@@ -52,7 +52,7 @@ public abstract class Minesweeper
             this.height = height;
         if (mines > 0)
             this.mines = mines;
-        setUpMassives();
+        setUpBoards();
         this.computeFiled();
         this.clearMask();
         this.state = MinesweeperGameState.WaitForStart;

@@ -1,4 +1,4 @@
-package Geometry;
+package Utilities.Geometry;
 
 public class Vector2
 {

@@ -5,8 +5,7 @@ public class MathHelper
     public static double round(double value, int decimalPlace)
     {
         double power_of_ten = 1;
-        // floating point arithmetic can be very tricky.
-        // that's why I introduce a "fudge factor"
+        //introduce a "fudge factor" as maths can be evil.
         double fudge_factor = 0.05;
         while (decimalPlace-- > 0) {
             power_of_ten *= 10.0d;

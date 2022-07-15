@@ -7,7 +7,7 @@ import java.awt.Toolkit;
 import java.awt.event.ComponentEvent;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
-import Games.*;
+import gameplay.*;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Point;

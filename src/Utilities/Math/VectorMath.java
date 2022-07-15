@@ -1,14 +1,15 @@
 package Utilities.Math;
 
-import Geometry.Vector2;
+import Utilities.Geometry.Vector2;
 
 public class VectorMath
 {
-    public static float LenghtF(Vector2 value)
+
+    public static float LengthF(Vector2 value)
     {
         return (float)(Math.sqrt(value.x*value.x+value.y*value.y));
     }
-    public static int LenghtI(Vector2 value)
+    public static int LengthI(Vector2 value)
     {
         return (int)Math.round(Math.sqrt(value.x*value.x+value.y*value.y));
     }
@@ -43,22 +44,22 @@ public class VectorMath
     }
     public static Vector2 Min(Vector2 value1, Vector2 value2)
     {
-        return new Vector2((value1.x < value2.x) ? value1.x : value2.x,
-                (value1.y < value2.y) ? value1.y : value2.y);
+        return new Vector2(Math.min(value1.x, value2.x),
+                Math.min(value1.y, value2.y));
     }
     public static Vector2 Max(Vector2 value1, Vector2 value2)
     {
-        return new Vector2((value1.x > value2.x) ? value1.x : value2.x,
-                (value1.y > value2.y) ? value1.y : value2.y);
+        return new Vector2(Math.max(value1.x, value2.x),
+                Math.max(value1.y, value2.y));
     }
     public static Vector2 Clamp(Vector2 value1, Vector2 min, Vector2 max)
     {
         float x = value1.x;
-        x = (x > max.x) ? max.x : x;
-        x = (x < min.x) ? min.x : x;
+        x = Math.min(x, max.x);
+        x = Math.max(x, min.x);
         float y = value1.y;
-        y = (y > max.y) ? max.y : y;
-        y = (y < min.y) ? min.y : y;
+        y = Math.min(y, max.y);
+        y = Math.max(y, min.y);
         return new Vector2(x, y);
     }
     public static Vector2 Lerp(Vector2 value1, Vector2 value2, float amount)
@@ -75,7 +76,7 @@ public class VectorMath
     }
     public static Vector2 SmoothStep(Vector2 value1, Vector2 value2, float amount)
     {
-        amount = (amount > 1f) ? 1f : ((amount < 0f) ? 0f : amount);
+        amount = (amount > 1f) ? 1f : (Math.max(amount, 0f));
         amount = (amount * amount) * (3f - (2f * amount));
         return new Vector2(value1.x + ((value2.x - value1.x) * amount), value1.y + ((value2.y - value1.y) * amount));
     }

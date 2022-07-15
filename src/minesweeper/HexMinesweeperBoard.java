@@ -1,6 +1,6 @@
 package minesweeper;
 
-import Games.HexMinesweeper;
+import gameplay.HexMinesweeper;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;

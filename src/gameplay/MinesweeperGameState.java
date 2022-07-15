@@ -1,4 +1,4 @@
-package Games;
+package gameplay;
 
 
 public enum MinesweeperGameState

@@ -1,6 +1,6 @@
 package minesweeper;
 
-import Games.SqrMinesweeper;
+import gameplay.SqrMinesweeper;
 
 import java.awt.*;
 import java.awt.event.ComponentEvent;
