@@ -42,7 +42,7 @@ public class MainForm extends JFrame implements ActionListener
         filedTypeMenu = new JMenu("Grid Shape");
         noviceItem = new JMenuItem("Easy 9x9 10 Mines");
         amateurItem = new JMenuItem("Medium 16x16 40 Mines");
-        expertItem = new JMenuItem("Hard 16x30 99 Mines");
+        expertItem = new JMenuItem("Hard 24x20 99 Mines");
         noviceItem.addActionListener(this);
         amateurItem.addActionListener(this);
         expertItem.addActionListener(this);
@@ -65,7 +65,7 @@ public class MainForm extends JFrame implements ActionListener
         setJMenuBar(MenuBar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(1000,1000);
         board = new OctMinesweeperBoard();
         getContentPane().add(board);
         board.setSize(getSize());
@@ -96,7 +96,7 @@ public class MainForm extends JFrame implements ActionListener
         }
         if(source == expertItem)
         {
-            w = 30; h = 16;b = 99;
+            w = 24; h = 20;b = 99;
             board.GetGame().LoadGame(w, h,b);
             board.resized(null);
         }
