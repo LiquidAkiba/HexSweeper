@@ -18,7 +18,7 @@ public class MainForm extends JFrame implements ActionListener
     JMenuItem noviceItem;
     JMenuItem amateurItem;
     JMenuItem expertItem;
-    JMenuItem octFiledItem;
+    JMenuItem SqrFiledItem;
     JMenuItem hexFiledItem;
     MinesweeperBoard board;
     int w = 9;
@@ -49,11 +49,11 @@ public class MainForm extends JFrame implements ActionListener
         filedSizeMenu.add(noviceItem);
         filedSizeMenu.add(amateurItem);
         filedSizeMenu.add(expertItem);
-        octFiledItem = new JMenuItem("Square, 8 Sides");
-        octFiledItem.addActionListener(this);
+        SqrFiledItem = new JMenuItem("Square, 8 Sides");
+        SqrFiledItem.addActionListener(this);
         hexFiledItem = new JMenuItem("Hexagon, 6 Sides");
         hexFiledItem.addActionListener(this);
-        filedTypeMenu.add(octFiledItem);
+        filedTypeMenu.add(SqrFiledItem);
         filedTypeMenu.add(hexFiledItem);
         GameMenu.add(newGameItem);
         GameMenu.add(resetGameItem);
@@ -66,7 +66,7 @@ public class MainForm extends JFrame implements ActionListener
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(1000,1000);
-        board = new OctMinesweeperBoard();
+        board = new SqrMinesweeperBoard();
         getContentPane().add(board);
         board.setSize(getSize());
         board.GetGame().LoadGame(w,h,b);
@@ -100,9 +100,9 @@ public class MainForm extends JFrame implements ActionListener
             board.GetGame().LoadGame(w, h,b);
             board.resized(null);
         }
-        if(source == octFiledItem)
+        if(source == SqrFiledItem)
         {
-            board = new OctMinesweeperBoard();
+            board = new SqrMinesweeperBoard();
             getContentPane().removeAll();
             getContentPane().add(board);
             board.setSize(getContentPane().getSize());

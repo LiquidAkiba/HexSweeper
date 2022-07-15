@@ -3,9 +3,9 @@ package Games;
 import java.awt.Point;
 import java.util.ArrayList;
 
-public class OctMinesweeper extends Minesweeper
+public class SqrMinesweeper extends Minesweeper
 {
-    public OctMinesweeper()
+    public SqrMinesweeper()
     {
         super();
     }

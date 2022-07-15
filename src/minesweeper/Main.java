@@ -1,7 +1,7 @@
 package minesweeper;
 
 
-public class Main// extends JFrame
+public class Main
 {
     public Main()
     {

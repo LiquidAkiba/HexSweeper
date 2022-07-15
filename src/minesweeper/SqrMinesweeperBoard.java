@@ -1,19 +1,19 @@
 package minesweeper;
 
-import Games.OctMinesweeper;
+import Games.SqrMinesweeper;
 
 import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Rectangle2D;
 
-public class OctMinesweeperBoard extends MinesweeperBoard
+public class SqrMinesweeperBoard extends MinesweeperBoard
 {
     private float a = 1;
-    public OctMinesweeperBoard()
+    public SqrMinesweeperBoard()
     {
         super();
-        game = new OctMinesweeper();
+        game = new SqrMinesweeper();
     }
 
     @Override
